@@ -40,6 +40,8 @@ namespace Magitek.Logic.Summoner
         {
             if (Core.Me.ClassLevel < 70) return false;
 
+            if (!SummonerSettings.Instance.SummonBahamut) return false;
+
             if (Core.Me.Pet == null) return false;
 
             if (ActionResourceManager.Arcanist.AetherAttunement < 2) return false;
